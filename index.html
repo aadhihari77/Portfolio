@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhi Hari | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .bg-dark { background-color: #121417; } 
+    </style>
+</head>
+<body class="bg-dark text-white selection:bg-indigo-500">
+
+    <nav class="max-w-6xl mx-auto px-8 py-10 flex justify-between items-center">
+        <h1 class="text-2xl font-extrabold tracking-tighter uppercase border-b-4 border-indigo-500">AADHI HARI</h1>
+        <div class="hidden md:flex space-x-8 text-gray-400 font-medium text-xs tracking-widest">
+            <a href="#projects" class="hover:text-white transition">PROJECTS</a>
+            <a href="#experience" class="hover:text-white transition">EXPERIENCE</a>
+            <a href="mailto:aadhihari7@gmail.com" class="hover:text-white transition">CONTACT</a>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-8 py-20 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-8">Hey, I’m Aadhi.</h2>
+            <p class="text-xl text-gray-400 mb-10 leading-relaxed max-w-lg">
+                Computer Engineering student at <span class="text-white">UW-Madison</span>. I build full-stack apps and complex hardware systems using React, Node.js, and System Verilog.
+            </p>
+            <div class="flex gap-4">
+                <a href="#projects" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-full text-lg font-bold transition shadow-xl inline-block">My Projects</a>
+                <a href="assets/Aadhi_Resume.pdf" target="_blank" class="border border-gray-700 hover:border-gray-500 text-white px-8 py-4 rounded-full text-lg font-bold transition">Resume PDF</a>
+            </div>
+        </div>
+        <div class="flex justify-center md:justify-end">
+            <img src="assets/profile.jpg" alt="Aadhi" class="w-72 h-96 object-cover rounded-lg border-8 border-gray-900 shadow-2xl rotate-3 hover:rotate-0 transition duration-500">
+        </div>
+    </header>
+
+    <section id="projects" class="bg-white text-gray-900 py-24 px-8">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-4xl font-bold italic mb-12">Technical Projects</h3>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <a href="careflow.html" class="group block bg-gray-50 p-6 rounded-2xl border border-transparent hover:border-indigo-500 hover:shadow-xl transition-all">
+                    <div class="bg-gray-200 aspect-video rounded-xl mb-6 flex items-center justify-center font-mono text-gray-400 italic">CareFlow Interface</div>
+                    <span class="text-indigo-600 font-bold text-xs uppercase tracking-widest">React • Node.js • SQL</span>
+                    <h4 class="text-2xl font-bold mt-2">CareFlow Web App</h4>
+                    <p class="mt-4 text-gray-600 text-sm">Full-stack platform for workflow management, file uploads, and task tracking.</p>
+                </a>
+
+                <a href="robot.html" class="group block bg-gray-50 p-6 rounded-2xl border border-transparent hover:border-indigo-500 hover:shadow-xl transition-all">
+                    <div class="relative bg-gray-900 aspect-video rounded-xl mb-6 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center pl-1"><svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M4.5 3.5v13l11-6.5-11-6.5z"/></svg></div>
+                    </div>
+                    <span class="text-indigo-600 font-bold text-xs uppercase tracking-widest">FPGA • System Verilog</span>
+                    <h4 class="text-2xl font-bold mt-2">Knights Tour Robot</h4>
+                    <p class="mt-4 text-gray-600 text-sm">System Verilog-based design enabling a robot to solve chessboard navigation.</p>
+                </a>
+
+                <a href="bucky.html" class="group block bg-gray-50 p-6 rounded-2xl border border-transparent hover:border-indigo-500 hover:shadow-xl transition-all">
+                    <div class="bg-gray-200 aspect-video rounded-xl mb-6 flex items-center justify-center font-mono text-gray-400 italic">Bucky Basher Console</div>
+                    <span class="text-indigo-600 font-bold text-xs uppercase tracking-widest">Embedded C • FreeRTOS</span>
+                    <h4 class="text-2xl font-bold mt-2">Bucky Basher Game</h4>
+                    <p class="mt-4 text-gray-600 text-sm">Real-time multiplayer game on MSP432 with synchronized UART communication.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-8 border-t border-gray-800">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-sm font-bold text-indigo-500 uppercase tracking-[0.3em] mb-20 text-center">Professional Experience</h3>
+            
+            <div class="mb-24">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-end border-b border-gray-800 pb-4 mb-8">
+                    <h4 class="text-3xl font-bold text-white">Full-Stack Developer Intern</h4>
+                    <div class="text-right mt-2 md:mt-0">
+                        <p class="text-white font-semibold text-lg italic tracking-tight">Sogeti, part of Capgemini</p>
+                        <p class="text-gray-500 font-mono text-sm uppercase">June 2025 – August 2025</p>
+                    </div>
+                </div>
+                <ul class="space-y-6 text-gray-400 text-lg list-disc list-outside ml-6 leading-relaxed max-w-4xl">
+                    <li>Developed the WinWire Generator, a 3-tier web application using React.js, Tailwind CSS, Node.js/Express, and Azure SQL Server to automate client project summaries with Generative AI, reducing processing time.</li>
+                    <li>Designed and implemented secure, scalable file storage and retrieval by integrating Azure SQL Server for structured metadata and Azure Blob Storage for large document handling, with optimized SQL queries.</li>
+                    <li>Integrated the Azure OpenAI API with custom prompt engineering to generate dynamic project summaries from uploaded files, incorporating document parsing logic.</li>
+                    <li>Led frontend development for SAGE (Sogeti Agent Exchange), a web app showcasing Sogeti’s library of AI agents where users can explore, interact, and leave ratings, enhancing discoverability and internal adoption.</li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="flex flex-col md:flex-row md:justify-between md:items-end border-b border-gray-800 pb-4 mb-8">
+                    <h4 class="text-3xl font-bold text-white">Solution Delivery Intern</h4>
+                    <div class="text-right mt-2 md:mt-0">
+                        <p class="text-white font-semibold text-lg italic tracking-tight">Johnson Controls Inc.</p>
+                        <p class="text-gray-500 font-mono text-sm uppercase">May 2024 – April 2025</p>
+                    </div>
+                </div>
+                <ul class="space-y-6 text-gray-400 text-lg list-disc list-outside ml-6 leading-relaxed max-w-4xl">
+                    <li>Designed and presented a comprehensive Azure DevOps dashboard to enhance project tracking and Product Lifecycle Management (PLM), incorporating team feedback for continuous improvements.</li>
+                    <li>Integrated Static Application Security Testing (SAST) tools into Azure CI/CD pipelines, elevating code quality while collaborating on Git integration and DevOps repository management.</li>
+                    <li>Developed a Java pipeline to convert Windchill codes into SAP-compatible syntax, successfully implemented within the Windchill PLM project.</li>
+                    <li>Delivered technical presentations on Microsoft Copilot, DevOps, and innovative solutions at team meetings and innovation challenges, strengthening team knowledge.</li>
+                    <li>Achieved first place in the Intern Hackathon by leveraging the Pandas library to parse JSON files and normalize scrap data efficiently.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-20 px-8 text-center border-t border-gray-900">
+        <p class="text-gray-500 mb-8 italic uppercase tracking-widest text-xs font-bold">University of Wisconsin-Madison • Class of 2026</p>
+        <a href="mailto:aadhihari7@gmail.com" class="text-2xl hover:text-indigo-400 transition underline underline-offset-8 font-light">aadhihari7@gmail.com</a>
+        <div class="mt-12 flex justify-center space-x-10 text-xs font-bold text-gray-600 uppercase tracking-[0.2em]">
+            <a href="https://www.linkedin.com/in/aadhihari7/" target="_blank" class="hover:text-white transition">LinkedIn</a>
+            <a href="https://github.com/yourusername" target="_blank" class="hover:text-white transition">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>

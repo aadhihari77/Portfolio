@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knights Tour Robot | Aadhi Hari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <nav class="p-8 max-w-5xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="flex items-center text-indigo-600 font-bold hover:text-indigo-800 transition">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            Back to Home
+        </a>
+        <span class="text-slate-400 font-mono text-sm uppercase tracking-widest">Hardware-Software Integration</span>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-8 py-12">
+        <h1 class="text-5xl font-extrabold tracking-tighter mb-6 text-slate-900">Knights Tour Mobile Robot</h1>
+        
+        <div class="bg-black rounded-3xl overflow-hidden shadow-2xl mb-16 aspect-video flex items-center justify-center">
+            <video controls class="w-full h-full">
+                <source src="assets/Knight_General_Tour.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="md:col-span-2">
+                <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+                <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                    Collaborated in a team of five to develop a System Verilog-based design for solving the Knights Tour problem, enabling a robot to cover a chessboard while visiting all squares exactly once.
+                </p>
+                
+                <h3 class="text-xl font-bold mb-4">Key Responsibilities</h3>
+                <ul class="space-y-4 text-slate-600 list-disc list-outside ml-6">
+                    <li>Designed testbenches and integrated with Python scripts for simulation control and waveform analysis.</li>
+                    <li>Managed log collection and file management to ensure efficient verification and debugging.</li>
+                    <li>Synthesized the design for real-world implementation on an Altera Cyclone-IV FPGA.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 h-fit">
+                <h3 class="font-bold text-slate-400 uppercase text-xs tracking-widest mb-4">Technologies Used</h3>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">System Verilog</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">FPGA</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">Altera Cyclone-IV</span>
+                </div>
+                <a href="#" class="block w-full text-center bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-700 transition">View Source Code</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-20 text-center text-slate-400 border-t border-slate-100 mt-20">
+        <p>© 2026 Aadhi Hari • Built with Tailwind CSS</p>
+    </footer>
+
+</body>
+</html>
