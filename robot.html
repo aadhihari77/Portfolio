@@ -5,57 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knights Tour Robot | Aadhi Hari</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
 
     <nav class="p-8 max-w-5xl mx-auto flex justify-between items-center">
         <a href="index.html" class="flex items-center text-indigo-600 font-bold hover:text-indigo-800 transition">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
             Back to Home
         </a>
-        <span class="text-slate-400 font-mono text-sm uppercase tracking-widest">Hardware-Software Integration</span>
+        <span class="text-slate-400 font-mono text-xs uppercase tracking-widest">Hardware-Software Systems</span>
     </nav>
 
-    <main class="max-w-5xl mx-auto px-8 py-12">
-        <h1 class="text-5xl font-extrabold tracking-tighter mb-6 text-slate-900">Knights Tour Mobile Robot</h1>
+    <main class="max-w-4xl mx-auto px-8 py-12">
+        <h1 class="text-5xl font-extrabold tracking-tighter mb-4">Knights Tour Mobile Robot</h1>
+        <p class="text-indigo-600 font-medium text-lg mb-12 italic">Solving the classic mathematical puzzle through FPGA-driven robotics.</p>
         
-        <div class="bg-black rounded-3xl overflow-hidden shadow-2xl mb-16 aspect-video flex items-center justify-center">
+        <div class="bg-black rounded-3xl overflow-hidden shadow-2xl mb-16 aspect-video">
             <video controls class="w-full h-full">
-                <source src="assets/Knight_General_Tour.mp4" type="video/mp4">
+                <source src="assets/knights_tour_demo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-12">
-            <div class="md:col-span-2">
-                <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
-                <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                    Collaborated in a team of five to develop a System Verilog-based design for solving the Knights Tour problem, enabling a robot to cover a chessboard while visiting all squares exactly once.
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 italic">The Challenge</h2>
+            <div class="text-lg text-slate-700 space-y-6">
+                <p>
+                    The project began with a fundamental question: Can we design a physical system capable of solving the complex "Knights Tour" algorithm in real-time? [cite: 27]
+                    Our goal was to develop a SystemVerilog-based design that would allow a mobile robot to traverse a standard chessboard, visiting every single square exactly once, regardless of where it started. [cite: 27]
                 </p>
-                
-                <h3 class="text-xl font-bold mb-4">Key Responsibilities</h3>
-                <ul class="space-y-4 text-slate-600 list-disc list-outside ml-6">
-                    <li>Designed testbenches and integrated with Python scripts for simulation control and waveform analysis.</li>
-                    <li>Managed log collection and file management to ensure efficient verification and debugging.</li>
-                    <li>Synthesized the design for real-world implementation on an Altera Cyclone-IV FPGA.</li>
+                <p>
+                    Working in a **collaborative team of five**, we navigated the intersection of logic design and physical locomotion. [cite: 27] 
+                    The complexity lay in the verification—ensuring that the hardware logic was bulletproof before it ever touched the physical FPGA.  
+                    This led to a robust development cycle where simulation and hardware synthesis had to work in perfect harmony. 
+                </p>
+                <p>
+                    The journey culminated in a successful hardware demonstration, where the design was synthesized for an **Altera Cyclone-IV FPGA**. [cite: 28] 
+                    Watching the robot accurately navigate the grid was the ultimate validation of our design and verification architecture. [cite: 28]
+                </p>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-slate-900 text-xl mb-4">Core Requirements</h3>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex items-start"><span class="text-indigo-500 mr-2">✔</span> Complete board coverage (64 squares).</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-2">✔</span> Start-position independence.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-2">✔</span> Real-time path calculation on FPGA hardware.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-2">✔</span> High-fidelity simulation for logic verification.</li>
                 </ul>
             </div>
-
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 h-fit">
-                <h3 class="font-bold text-slate-400 uppercase text-xs tracking-widest mb-4">Technologies Used</h3>
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">System Verilog</span>
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-slate-900 text-xl mb-4">The Tech Stack</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">SystemVerilog</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">Verilog</span>
                     <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">FPGA</span>
                     <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">Altera Cyclone-IV</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">FPGA Synthesis</span>
                 </div>
-                <a href="#" class="block w-full text-center bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-700 transition">View Source Code</a>
             </div>
         </div>
+
+        <section class="bg-indigo-900 text-white p-10 rounded-3xl shadow-xl">
+            <h3 class="text-2xl font-bold mb-8">My Engineering Contributions</h3>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <h4 class="text-indigo-300 font-bold uppercase tracking-widest text-xs mb-2">Design & Verification</h4>
+                    <p class="text-indigo-50">
+                        Designed comprehensive testbenches and integrated Python scripts for advanced simulation control. [cite: 27]
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-indigo-300 font-bold uppercase tracking-widest text-xs mb-2">Analysis & Automation</h4>
+                    <p class="text-indigo-50">
+                        Built systems for waveform analysis, automated log collection, and file management to streamline debugging. [cite: 27]
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-indigo-300 font-bold uppercase tracking-widest text-xs mb-2">Hardware Synthesis</h4>
+                    <p class="text-indigo-50">
+                        Led the synthesis process for real-world implementation on the Altera Cyclone-IV FPGA. [cite: 28]
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-indigo-300 font-bold uppercase tracking-widest text-xs mb-2">Collaboration</h4>
+                    <p class="text-indigo-50">
+                        Partnered within a team of five to ensure hardware-software parity and project success. [cite: 27]
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="py-20 text-center text-slate-400 border-t border-slate-100 mt-20">
-        <p>© 2026 Aadhi Hari • Built with Tailwind CSS</p>
+        <p>© 2026 Aadhi Hari • Built for Software & Hardware Engineering Excellence</p>
     </footer>
 
 </body>
