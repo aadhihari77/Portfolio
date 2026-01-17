@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucky Basher | Aadhi Hari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+
+    <nav class="p-8 max-w-5xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="flex items-center text-indigo-600 font-bold hover:text-indigo-800 transition">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            Back to Home
+        </a>
+        <span class="text-slate-400 font-mono text-xs uppercase tracking-widest">Embedded Systems & Firmware</span>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-8 py-12">
+        <h1 class="text-5xl font-extrabold tracking-tighter mb-4">Bucky Basher Game</h1>
+        <p class="text-indigo-600 font-medium text-lg mb-12 italic">Real-time multiplayer synchronization on a microcontroller architecture.</p>
+        
+         <div class="bg-black rounded-3xl overflow-hidden shadow-2xl mb-16 aspect-video">
+            <video controls class="w-full h-full">
+                <source src="assets/Knight_General_Tour.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 italic">The Challenge</h2>
+            <div class="text-lg text-slate-700 space-y-6">
+                <p>
+                    Bucky Basher was a project centered on the intersection of firmware engineering and real-time interaction. The goal was to develop a multiplayer game that ran on an MSP432P401R microcontroller, requiring a deep understanding of low-level hardware communication and RTOS task scheduling.
+                </p>
+                <p>
+                    The most significant hurdle was achieving perfectly synchronized gameplay between two independent boards over UART communication. Managing high-speed data transfer while simultaneously handling joystick inputs, LCD updates, and EEPROM storage required precise task prioritization within the FreeRTOS environment.
+                </p>
+                <p>
+                    By leveraging FreeRTOS, I ensured that the game remained responsive, providing a timed, competitive setup where players could collect ghosts across a two-board setup without lag or system crashes.
+                </p>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-slate-900 text-xl mb-4">Core Requirements</h3>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex items-start"><span class="text-indigo-500 mr-2">✔</span> Real-time multiplayer synchronization.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-2">✔</span> Integration of peripherals (LCD, Joystick, EEPROM).</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-2">✔</span> Efficient task scheduling via FreeRTOS.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-2">✔</span> Robust UART communication protocol.</li>
+                </ul>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-slate-900 text-xl mb-4">The Tech Stack</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">Embedded C</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">FreeRTOS</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">MSP432</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">UART</span>
+                    <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium">CCS</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="bg-indigo-900 text-white p-10 rounded-3xl shadow-xl">
+            <h3 class="text-2xl font-bold mb-8">My Engineering Contributions</h3>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <h4 class="text-indigo-300 font-bold uppercase tracking-widest text-xs mb-2">Firmware Development</h4>
+                    <p class="text-indigo-50">
+                        Developed the game logic in Embedded C using Code Composer Studio on the MSP432 platform.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-indigo-300 font-bold uppercase tracking-widest text-xs mb-2">RTOS Management</h4>
+                    <p class="text-indigo-50">
+                        Utilized FreeRTOS for precise task scheduling, ensuring responsive gameplay and peripheral management.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-indigo-300 font-bold uppercase tracking-widest text-xs mb-2">Peripheral Integration</h4>
+                    <p class="text-indigo-50">
+                        Integrated LCD displays, joysticks, and pushbuttons, and managed persistent data with EEPROM.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-indigo-300 font-bold uppercase tracking-widest text-xs mb-2">Wireless Systems</h4>
+                    <p class="text-indigo-50">
+                        Designed a synchronized multiplayer system using UART to link boards for competitive gameplay.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 text-center text-slate-400 border-t border-slate-100 mt-20">
+        <p>© 2026 Aadhi Hari • Embedded Systems Design</p>
+    </footer>
+
+</body>
+</html>
